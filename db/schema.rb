@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 20150615123615) do
     t.string   "company"
     t.string   "email"
     t.string   "phone"
-    t.integer  "samurai_user_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "samurai_contacts_contacts", ["samurai_user_id"], name: "index_samurai_contacts_contacts_on_samurai_user_id"
+  add_index "samurai_contacts_contacts", ["user_id"], name: "index_samurai_contacts_contacts_on_user_id"
 
   create_table "samurai_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
