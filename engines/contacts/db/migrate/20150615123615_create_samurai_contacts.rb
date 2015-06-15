@@ -6,9 +6,9 @@ class CreateSamuraiContacts < ActiveRecord::Migration
       t.string :company
       t.string :email
       t.string :phone
-      t.references :user, index: true, foreign_key: :samurai_users
-
       t.timestamps null: false
+      t.references :user, index: true
     end
+    add_foreign_key :samurai_contacts_contacts, :samurai_users, column: :user_id
   end
 end

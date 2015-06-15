@@ -26,7 +26,7 @@ module Samurai
       # POST /contacts
       def create
         @contact = Contact.new(contact_params)
-
+        @contact.user = current_user
         if @contact.save
           redirect_to [samurai, @contact], notice: 'Contact was successfully created.'
         else
