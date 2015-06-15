@@ -13,5 +13,9 @@ module Samurai
     def active(path)
       current_page?(path) ? 'active' : ''
     end
+
+    def active_section(path)
+      (path.split('/').second == request.path_info.split('/').second) ? 'active' : ''
+    end
   end
 end
