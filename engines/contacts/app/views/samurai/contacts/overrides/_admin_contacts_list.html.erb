@@ -17,14 +17,14 @@
           <td><%= contact.id %></td>
           <td><%= contact.first_name %> <%= contact.last_name %></td>
           <td><%= contact.email %></td>
-          <td><%= contact.created_at.strftime("%d %b. %Y") %></td>
+          <td><%= contact.created_at.strftime("%b %d, %Y") %></td>
         </tr>
       <% end %>
       </tbody>
     </table>
 
     <div class="panel-body text-center">
-      <%= link_to '...', samurai.contacts_path %>
+      <%= link_to '...', samurai.admin_contacts_path %>
     </div>
 
   </div>
